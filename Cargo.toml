@@ -7,8 +7,21 @@ edition = "2021"
 
 [dependencies]
 futures = "0.3"
-wai-bindgen-rust = "0.2"
-raikiri-bindings = { git = "https://github.com/viniciusfonseca/raikiri-bindings.git" } 
+raikiri-bindings = { path = "../raikiri-bindings" } 
+wit-bindgen = "0.27.0"
+wit-bindgen-rt = { version = "0.27.0", features = ["bitflags"] }
+
+[profile.release]
+codegen-units = 1
+opt-level = "s"
+debug = false
+strip = true
+lto = true
 
 [lib]
 crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "raikiri-wit:bindings"
+
+[package.metadata.component.dependencies]

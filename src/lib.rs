@@ -1,9 +1,10 @@
 raikiri_bindings::init!();
 
-async fn handler(_event: String) -> ModuleResponse {
-    let body = "Hello World".to_string();
+async fn handler(_req: Request) -> ModuleResponse {
+    println!("Logging to STDOUT");
+    let body = "Hello World";
     ModuleResponseBuilder::new()
         .status(200)
-        .body(body)
+        .body(body.as_bytes().to_vec())
         .finish()
 }
