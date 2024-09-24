@@ -9,7 +9,6 @@ edition = "2021"
 futures = "0.3"
 raikiri-bindings = { path = "../raikiri-bindings" } 
 wit-bindgen = "0.27.0"
-wit-bindgen-rt = { version = "0.27.0", features = ["bitflags"] }
 
 [profile.release]
 codegen-units = 1
