@@ -1,0 +1,1 @@
+raikiri component run --request "`cat request.json`"

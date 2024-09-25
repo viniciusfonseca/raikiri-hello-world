@@ -6,9 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-futures = "0.3"
-raikiri-bindings = { path = "../raikiri-bindings" } 
-wit-bindgen = "0.27.0"
+waki = "0.3.1"
 
 [profile.release]
 codegen-units = 1
@@ -19,8 +17,3 @@ lto = true
 
 [lib]
 crate-type = ["cdylib"]
-
-[package.metadata.component]
-package = "raikiri-wit:bindings"
-
-[package.metadata.component.dependencies]
