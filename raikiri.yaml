@@ -1,0 +1,9 @@
+components:
+  hello: /target/wasm32-wasi/release/raikiri_hello_world.wasm
+
+run:
+  hello:
+    component: hello
+    method: GET
+    headers: {}
+    body: ""
